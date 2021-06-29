@@ -1,0 +1,48 @@
+@import 'styles/variables.scss';
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.GameCanvas {
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px;
+  &__item {
+    border: solid 1px $black;
+    cursor: pointer;
+    user-select: none;
+    transition: all 100ms ease-in-out;
+    font-size: 24px;
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    &:hover {
+      background-color: $light-blue1;
+    }
+  }
+  &__reset {
+    margin-top: 15px;
+  }
+  &__start {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border: solid 2px $white;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
