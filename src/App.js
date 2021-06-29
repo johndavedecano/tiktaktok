@@ -47,8 +47,6 @@ function App() {
   const getRandomAvailableItem = (filled) => {
     const available = VALIDS.filter((i) => !filled.includes(i))
 
-    console.log(available)
-
     return available[Math.floor(Math.random() * available.length)]
   }
 
