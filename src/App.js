@@ -10,7 +10,9 @@ function App() {
   const TIK = 'X'
   const TAK = 'O'
 
-  const combinations = [
+  const VALIDS = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+  const COMBOS = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -43,9 +45,7 @@ function App() {
   }
 
   const getRandomAvailableItem = (filled) => {
-    const available = [0, 1, 2, 3, 4, 5, 6, 7, 8].filter(
-      (i) => !filled.includes(i)
-    )
+    const available = VALIDS.filter((i) => !filled.includes(i))
 
     console.log(available)
 
@@ -84,10 +84,10 @@ function App() {
   }
 
   const validateIfWinner = (items) => {
-    for (let i = 0; i < combinations.length; i++) {
-      const a = combinations[i][0]
-      const b = combinations[i][1]
-      const c = combinations[i][2]
+    for (let i = 0; i < COMBOS.length; i++) {
+      const a = COMBOS[i][0]
+      const b = COMBOS[i][1]
+      const c = COMBOS[i][2]
       if (items.includes(a) && items.includes(b) && items.includes(c)) {
         return c
       }
