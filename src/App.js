@@ -89,7 +89,7 @@ function App() {
       const b = COMBOS[i][1]
       const c = COMBOS[i][2]
       if (items.includes(a) && items.includes(b) && items.includes(c)) {
-        return c
+        return true
       }
     }
 
